@@ -207,7 +207,11 @@ void MainWindow::comerBolitas()
    for(int i=0;i<40;i++){
        if(jugador->collidesWithItem(bolas[i])){
             bolas[i]->position(600,600);
+            numero++;
        }
    }
-
+   U=numero%10;
+   D=numero/10;
+   unidades->changeCont(U);
+   decenas->changeCont(D);
 }

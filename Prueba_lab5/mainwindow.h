@@ -28,6 +28,9 @@ public:
 
 private:
     int vel=3;
+    int U=0;
+    int D=0;
+    int numero=0;
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
     pacman *jugador;
