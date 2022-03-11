@@ -7,7 +7,8 @@
 #include "QKeyEvent"
 #include <QTimer>
 #include <QGraphicsRectItem>
-
+#include "bolitas.h"
+#include "contador.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -21,14 +22,21 @@ public:
     ~MainWindow();
     void keyPressEvent(QKeyEvent *event);
     void createBordes();
+    void createParedes();
     void bordesColisiones(QKeyEvent *event);
+    void comerBolitas();
 
 private:
     int vel=3;
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
     pacman *jugador;
+    Contador * unidades;
+    Contador * decenas;
+    bolitas * bolas[50];
     QTimer *timer;
+
+
     //bordes del cuadrado
     QGraphicsRectItem * LbordeU;
     QGraphicsRectItem * LbordeD;
@@ -36,6 +44,24 @@ private:
     QGraphicsRectItem * RbordeU;
     QGraphicsRectItem * RbordeD;
     QGraphicsRectItem * Dborde;
+
+    //Marcos del contador
+    QGraphicsRectItem * McontU;
+    QGraphicsRectItem * McontL;
+
+    //Marcos del contador
+    QGraphicsRectItem * barra1;
+    QGraphicsRectItem * barra2;
+    QGraphicsRectItem * barra3;
+    QGraphicsRectItem * barra4;
+    QGraphicsRectItem * barra5;
+    QGraphicsRectItem * barra6;
+    QGraphicsRectItem * barra7;
+    QGraphicsRectItem * barra8;
+    QGraphicsRectItem * barra9;
+    QGraphicsRectItem * barra10;
+    QGraphicsRectItem * barra11;
+
 
     //baderas de colisiones
     bool col_D=false;
