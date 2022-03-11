@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     jugador->posicion(330,20);
     scene->addItem(jugador);
     timer = new QTimer;
+    ui->graphicsView->setBackgroundBrush(QBrush((QImage(":/images/azul-color.png"))));
     createBordes();
     createParedes();
 
